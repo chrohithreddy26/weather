@@ -1,78 +1,91 @@
-/* WeatherDisplay.css */
-
-.weather-container {
-  max-width: 500px; /* Reduced container width */
-  margin: auto;
-  margin-top: 100px;
-  padding: 20px;
-  border: 1px solid #ccc;
-  border-radius: 8px;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-  transition: opacity 0.5s ease-in-out;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  height: 200px; /* Reduced container height */
+body {
+  margin: 0;
+  padding: 0;
+  background-image:url("https://images.pexels.com/photos/1118873/pexels-photo-1118873.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1");
+  background-size: cover;
+  background-repeat: no-repeat;
 }
 
-.weather-container.loaded {
-  opacity: 1;
-}
-
-form {
+.intro-section {
+  text-align: center;
   margin-bottom: 20px;
 }
 
+form {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+
+.form-section {
+  display: flex;
+  flex-direction: column;
+  width: 60%;
+}
+
+.label {
+  font-weight: bold;
+}
+
 input {
-  padding: 8px;
-  margin-right: 8px;
+  padding: 12px;
+  font-size: 18px;
+  width: 100%;
+  border: 1px solid #0c0c0c;
+  border-radius: 8px;
+  outline: none;
+  background-color: rgb(255, 255, 255);
+  margin-left: 30px;
+}
+
+input:focus {
+  border-color: #349938;
 }
 
 button {
-  padding: 10px 20px; /* Increased padding for better interactivity */
-  background-color: #007bff;
+  padding: 10px;
+  font-size: 16px;
+  cursor: pointer;
+  background-color: #349938;
   color: #fff;
   border: none;
   border-radius: 4px;
-  cursor: pointer;
-  align-items: end;  
-  transition: background-color 0.3s ease; /* Smooth transition for better interactivity */
-
-  /* Hover effect */
-  &:hover {
-    background-color: #0056b3;
-  }
+  margin-right: 370px;
+  margin-top: 3px;
 }
 
-/* Center the submit button on the next line */
-.submit {
-  display: block;
-  margin: auto;
+button:hover {
+  background-color: #45a049;
 }
 
 .loading {
-  font-style: italic;
-  color: #888;
-}
-
-.weather-info {
+  font-size: 16px;
+  text-align: center;
   margin-top: 20px;
 }
 
-.weather-info h2 {
-  font-size: 18px;
-  margin-bottom: 10px;
-  color: #333; /* Set the color for the heading */
+
+.weather-info {
+  margin-top: 20px;
+  position: relative;
+  margin-left: 40px;
 }
 
-.weather-info p {
-  margin: 5px 0;
-  color: #555; /* Set the color for the paragraph text */
+
+.input-container {
+  position: relative;
 }
 
-.weather-image img {
-  max-width: 100%;
-  border-radius: 8px;
-  box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+.clear-input {
+  position: absolute;
+  margin-left: 850px; 
+  top: 50%;
+font-size: 21px;
+  transform: translateY(-50%);
+  cursor: pointer;
+  color: #888;
+}
+
+.clear-input:hover {
+  color: rgb(14, 13, 13); 
 }
